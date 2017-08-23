@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		68F380E7B47E91AC808AD2CF /* Pods_Roastr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BD5A7FEE7E6DA2A06F6D11 /* Pods_Roastr.framework */; };
+		AA2E86411DF8ABC20051BB59 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2E86401DF8ABC20051BB59 /* SettingsViewController.m */; };
+		AA5528A41E9BEEAB00717071 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5528A31E9BEEAB00717071 /* StoreKit.framework */; };
+		AA5B8AAF1E0B7A64009C131B /* FriendRequestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5B8AAE1E0B7A64009C131B /* FriendRequestsViewController.m */; };
+		AA7AC2871E70A35200273DF8 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7AC2821E70A35200273DF8 /* checkmark.png */; };
+		AA7AC2881E70A35200273DF8 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7AC2831E70A35200273DF8 /* cover.png */; };
+		AA7AC2891E70A35200273DF8 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7AC2841E70A35200273DF8 /* left.png */; };
+		AA7AC28A1E70A35200273DF8 /* roastrtransparent.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7AC2851E70A35200273DF8 /* roastrtransparent.png */; };
+		AA7AC28B1E70A35200273DF8 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA7AC2861E70A35200273DF8 /* x.png */; };
+		AA9C07C71E161C7E00D2BDED /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9C07C61E161C7E00D2BDED /* GoogleMobileAds.framework */; };
+		AAA7F9B71E03295E0056E73E /* ConversationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA7F9B61E03295E0056E73E /* ConversationsViewController.m */; };
+		AAAB593E1DB034BC00CB2344 /* RoastrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAB593D1DB034BC00CB2344 /* RoastrTests.m */; };
+		AAAB59491DB034BC00CB2344 /* RoastrUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAB59481DB034BC00CB2344 /* RoastrUITests.m */; };
+		AAAEBA3A1DB0362C004EC48A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEBA261DB0362B004EC48A /* AppDelegate.m */; };
+		AAAEBA3B1DB0362C004EC48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAEBA271DB0362B004EC48A /* Assets.xcassets */; };
+		AAAEBA3D1DB0362C004EC48A /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEBA2A1DB0362B004EC48A /* Base64.m */; };
+		AAAEBA3F1DB0362C004EC48A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEBA2D1DB0362B004EC48A /* main.m */; };
+		AAAEBA401DB0362C004EC48A /* PostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEBA2F1DB0362B004EC48A /* PostingViewController.m */; };
+		AAAEBA411DB0362C004EC48A /* PostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEBA311DB0362B004EC48A /* PostsViewController.m */; };
+		AAAEBA421DB0362C004EC48A /* PostView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEBA331DB0362B004EC48A /* PostView.m */; };
+		AAAEBA431DB0362C004EC48A /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEBA351DB0362B004EC48A /* ProfileViewController.m */; };
+		AAAEBA441DB0362C004EC48A /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEBA371DB0362B004EC48A /* SearchViewController.m */; };
+		AAAEBA451DB0362C004EC48A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEBA391DB0362C004EC48A /* ViewController.m */; };
+		AAAEBA471DB036AD004EC48A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAAEBA461DB036AD004EC48A /* Main.storyboard */; };
+		AAAF58CB1DEA4E0300681395 /* LikesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAF58CA1DEA4E0300681395 /* LikesViewController.m */; };
+		AAB9B8921E0A390B00FED9B3 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB9B8911E0A390B00FED9B3 /* FriendsViewController.m */; };
+		AAC0F53E1E18AC7C00057C53 /* LeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC0F53D1E18AC7C00057C53 /* LeaderboardViewController.m */; };
+		AAC31D751DFF097E00BBFA3D /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC31D741DFF097E00BBFA3D /* MessagesViewController.m */; };
+		AAC73C341DC3E51D0010E4CE /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC73C331DC3E51D0010E4CE /* PostViewController.m */; };
+		AAE9568E1DF5253000E63C11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE9568D1DF5253000E63C11 /* LaunchScreen.storyboard */; };
+		AAFF5C8E1DD7BD3900FF3D57 /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFF5C8D1DD7BD3900FF3D57 /* CommentsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAAB593A1DB034BC00CB2344 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAAB59181DB034BB00CB2344 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAAB591F1DB034BB00CB2344;
+			remoteInfo = Roastr;
+		};
+		AAAB59451DB034BC00CB2344 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAAB59181DB034BB00CB2344 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAAB591F1DB034BB00CB2344;
+			remoteInfo = Roastr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A1D672EE46EC07875216A655 /* Pods-Roastr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roastr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Roastr/Pods-Roastr.debug.xcconfig"; sourceTree = "<group>"; };
+		AA0B35AB1EA67E4A00330ADB /* socket.io-client-swift-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "socket.io-client-swift-master"; path = "../../../../../Downloads/socket.io-client-swift-master"; sourceTree = "<group>"; };
+		AA2E863F1DF8ABAF0051BB59 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		AA2E86401DF8ABC20051BB59 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		AA5528A31E9BEEAB00717071 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		AA5B8AAD1E0B7A4E009C131B /* FriendRequestsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendRequestsViewController.h; sourceTree = "<group>"; };
+		AA5B8AAE1E0B7A64009C131B /* FriendRequestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendRequestsViewController.m; sourceTree = "<group>"; };
+		AA7AC2821E70A35200273DF8 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		AA7AC2831E70A35200273DF8 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
+		AA7AC2841E70A35200273DF8 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		AA7AC2851E70A35200273DF8 /* roastrtransparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roastrtransparent.png; sourceTree = "<group>"; };
+		AA7AC2861E70A35200273DF8 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		AA9C07C61E161C7E00D2BDED /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		AAA7F9B51E0329430056E73E /* ConversationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversationsViewController.h; sourceTree = "<group>"; };
+		AAA7F9B61E03295E0056E73E /* ConversationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationsViewController.m; sourceTree = "<group>"; };
+		AAAB59201DB034BB00CB2344 /* Roastr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roastr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAAB59391DB034BC00CB2344 /* RoastrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoastrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAAB593D1DB034BC00CB2344 /* RoastrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoastrTests.m; sourceTree = "<group>"; };
+		AAAB593F1DB034BC00CB2344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAAB59441DB034BC00CB2344 /* RoastrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoastrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAAB59481DB034BC00CB2344 /* RoastrUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoastrUITests.m; sourceTree = "<group>"; };
+		AAAB594A1DB034BC00CB2344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAAB59741DB0352300CB2344 /* Roastr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roastr.entitlements; sourceTree = "<group>"; };
+		AAAEBA251DB0362B004EC48A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AAAEBA261DB0362B004EC48A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AAAEBA271DB0362B004EC48A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAAEBA291DB0362B004EC48A /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		AAAEBA2A1DB0362B004EC48A /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		AAAEBA2B1DB0362B004EC48A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAAEBA2D1DB0362B004EC48A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AAAEBA2E1DB0362B004EC48A /* PostingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostingViewController.h; sourceTree = "<group>"; };
+		AAAEBA2F1DB0362B004EC48A /* PostingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostingViewController.m; sourceTree = "<group>"; };
+		AAAEBA301DB0362B004EC48A /* PostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostsViewController.h; sourceTree = "<group>"; };
+		AAAEBA311DB0362B004EC48A /* PostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostsViewController.m; sourceTree = "<group>"; };
+		AAAEBA321DB0362B004EC48A /* PostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostView.h; sourceTree = "<group>"; };
+		AAAEBA331DB0362B004EC48A /* PostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostView.m; sourceTree = "<group>"; };
+		AAAEBA341DB0362B004EC48A /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		AAAEBA351DB0362B004EC48A /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		AAAEBA361DB0362B004EC48A /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		AAAEBA371DB0362B004EC48A /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		AAAEBA381DB0362B004EC48A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AAAEBA391DB0362C004EC48A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AAAEBA461DB036AD004EC48A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AAAF58C91DEA4DF300681395 /* LikesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LikesViewController.h; sourceTree = "<group>"; };
+		AAAF58CA1DEA4E0300681395 /* LikesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikesViewController.m; sourceTree = "<group>"; };
+		AAB9B8901E0A38F700FED9B3 /* FriendsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		AAB9B8911E0A390B00FED9B3 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		AABBA8551EA67B46005259C9 /* Source */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Source; path = "../../../../../Downloads/socket.io-client-swift-master/Source"; sourceTree = "<group>"; };
+		AAC0F53C1E18AC6600057C53 /* LeaderboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeaderboardViewController.h; sourceTree = "<group>"; };
+		AAC0F53D1E18AC7C00057C53 /* LeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardViewController.m; sourceTree = "<group>"; };
+		AAC31D731DFF096900BBFA3D /* MessagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		AAC31D741DFF097E00BBFA3D /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
+		AAC73C321DC3E50D0010E4CE /* PostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
+		AAC73C331DC3E51D0010E4CE /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
+		AAE9568D1DF5253000E63C11 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AAFF5C8C1DD7BD2200FF3D57 /* CommentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentsViewController.h; sourceTree = "<group>"; };
+		AAFF5C8D1DD7BD3900FF3D57 /* CommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsViewController.m; sourceTree = "<group>"; };
+		E3FE8A8603A92843CBB8357E /* Pods-Roastr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roastr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Roastr/Pods-Roastr.release.xcconfig"; sourceTree = "<group>"; };
+		E8BD5A7FEE7E6DA2A06F6D11 /* Pods_Roastr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roastr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAAB591D1DB034BB00CB2344 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA9C07C71E161C7E00D2BDED /* GoogleMobileAds.framework in Frameworks */,
+				AA5528A41E9BEEAB00717071 /* StoreKit.framework in Frameworks */,
+				68F380E7B47E91AC808AD2CF /* Pods_Roastr.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAB59361DB034BC00CB2344 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAB59411DB034BC00CB2344 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FDE6089F1262EBAFF01487D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1D672EE46EC07875216A655 /* Pods-Roastr.debug.xcconfig */,
+				E3FE8A8603A92843CBB8357E /* Pods-Roastr.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AA7D77EF1E20A50E0043B4E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA0B35AB1EA67E4A00330ADB /* socket.io-client-swift-master */,
+				AABBA8551EA67B46005259C9 /* Source */,
+				AA5528A31E9BEEAB00717071 /* StoreKit.framework */,
+				E8BD5A7FEE7E6DA2A06F6D11 /* Pods_Roastr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAAB59171DB034BB00CB2344 = {
+			isa = PBXGroup;
+			children = (
+				AA9C07C61E161C7E00D2BDED /* GoogleMobileAds.framework */,
+				AAAB59221DB034BB00CB2344 /* Roastr */,
+				AAAB593C1DB034BC00CB2344 /* RoastrTests */,
+				AAAB59471DB034BC00CB2344 /* RoastrUITests */,
+				AAAB59211DB034BB00CB2344 /* Products */,
+				AA7D77EF1E20A50E0043B4E2 /* Frameworks */,
+				8FDE6089F1262EBAFF01487D /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		AAAB59211DB034BB00CB2344 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAAB59201DB034BB00CB2344 /* Roastr.app */,
+				AAAB59391DB034BC00CB2344 /* RoastrTests.xctest */,
+				AAAB59441DB034BC00CB2344 /* RoastrUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAAB59221DB034BB00CB2344 /* Roastr */ = {
+			isa = PBXGroup;
+			children = (
+				AAAB59741DB0352300CB2344 /* Roastr.entitlements */,
+				AAE9568D1DF5253000E63C11 /* LaunchScreen.storyboard */,
+				AAAEBA461DB036AD004EC48A /* Main.storyboard */,
+				AAAEBA251DB0362B004EC48A /* AppDelegate.h */,
+				AAAEBA261DB0362B004EC48A /* AppDelegate.m */,
+				AAAEBA291DB0362B004EC48A /* Base64.h */,
+				AAAEBA2A1DB0362B004EC48A /* Base64.m */,
+				AAAEBA2E1DB0362B004EC48A /* PostingViewController.h */,
+				AAAEBA2F1DB0362B004EC48A /* PostingViewController.m */,
+				AAC73C321DC3E50D0010E4CE /* PostViewController.h */,
+				AAC73C331DC3E51D0010E4CE /* PostViewController.m */,
+				AA2E863F1DF8ABAF0051BB59 /* SettingsViewController.h */,
+				AA2E86401DF8ABC20051BB59 /* SettingsViewController.m */,
+				AAAEBA301DB0362B004EC48A /* PostsViewController.h */,
+				AAAEBA311DB0362B004EC48A /* PostsViewController.m */,
+				AAAEBA321DB0362B004EC48A /* PostView.h */,
+				AAAEBA331DB0362B004EC48A /* PostView.m */,
+				AAAEBA341DB0362B004EC48A /* ProfileViewController.h */,
+				AAAEBA351DB0362B004EC48A /* ProfileViewController.m */,
+				AAAEBA361DB0362B004EC48A /* SearchViewController.h */,
+				AAAEBA371DB0362B004EC48A /* SearchViewController.m */,
+				AAAEBA381DB0362B004EC48A /* ViewController.h */,
+				AAAEBA391DB0362C004EC48A /* ViewController.m */,
+				AAFF5C8C1DD7BD2200FF3D57 /* CommentsViewController.h */,
+				AAFF5C8D1DD7BD3900FF3D57 /* CommentsViewController.m */,
+				AAAF58C91DEA4DF300681395 /* LikesViewController.h */,
+				AAAF58CA1DEA4E0300681395 /* LikesViewController.m */,
+				AAC31D731DFF096900BBFA3D /* MessagesViewController.h */,
+				AAC31D741DFF097E00BBFA3D /* MessagesViewController.m */,
+				AAA7F9B51E0329430056E73E /* ConversationsViewController.h */,
+				AAA7F9B61E03295E0056E73E /* ConversationsViewController.m */,
+				AAB9B8901E0A38F700FED9B3 /* FriendsViewController.h */,
+				AAB9B8911E0A390B00FED9B3 /* FriendsViewController.m */,
+				AA5B8AAD1E0B7A4E009C131B /* FriendRequestsViewController.h */,
+				AA5B8AAE1E0B7A64009C131B /* FriendRequestsViewController.m */,
+				AAC0F53C1E18AC6600057C53 /* LeaderboardViewController.h */,
+				AAC0F53D1E18AC7C00057C53 /* LeaderboardViewController.m */,
+				AAAEBA2D1DB0362B004EC48A /* main.m */,
+				AAAEBA271DB0362B004EC48A /* Assets.xcassets */,
+				AA7AC2821E70A35200273DF8 /* checkmark.png */,
+				AA7AC2831E70A35200273DF8 /* cover.png */,
+				AA7AC2841E70A35200273DF8 /* left.png */,
+				AA7AC2851E70A35200273DF8 /* roastrtransparent.png */,
+				AA7AC2861E70A35200273DF8 /* x.png */,
+				AAAEBA2B1DB0362B004EC48A /* Info.plist */,
+			);
+			path = Roastr;
+			sourceTree = "<group>";
+		};
+		AAAB593C1DB034BC00CB2344 /* RoastrTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAAB593D1DB034BC00CB2344 /* RoastrTests.m */,
+				AAAB593F1DB034BC00CB2344 /* Info.plist */,
+			);
+			path = RoastrTests;
+			sourceTree = "<group>";
+		};
+		AAAB59471DB034BC00CB2344 /* RoastrUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AAAB59481DB034BC00CB2344 /* RoastrUITests.m */,
+				AAAB594A1DB034BC00CB2344 /* Info.plist */,
+			);
+			path = RoastrUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAAB591F1DB034BB00CB2344 /* Roastr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAAB594D1DB034BC00CB2344 /* Build configuration list for PBXNativeTarget "Roastr" */;
+			buildPhases = (
+				7D1BA54B9A6622B580150480 /* [CP] Check Pods Manifest.lock */,
+				AAAB591C1DB034BB00CB2344 /* Sources */,
+				AAAB591D1DB034BB00CB2344 /* Frameworks */,
+				AAAB591E1DB034BB00CB2344 /* Resources */,
+				3D74574CED23C387027C2032 /* [CP] Embed Pods Frameworks */,
+				46F07139FBE3C457BBEA5D31 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Roastr;
+			productName = Roastr;
+			productReference = AAAB59201DB034BB00CB2344 /* Roastr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAAB59381DB034BC00CB2344 /* RoastrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAAB59501DB034BC00CB2344 /* Build configuration list for PBXNativeTarget "RoastrTests" */;
+			buildPhases = (
+				AAAB59351DB034BC00CB2344 /* Sources */,
+				AAAB59361DB034BC00CB2344 /* Frameworks */,
+				AAAB59371DB034BC00CB2344 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAAB593B1DB034BC00CB2344 /* PBXTargetDependency */,
+			);
+			name = RoastrTests;
+			productName = RoastrTests;
+			productReference = AAAB59391DB034BC00CB2344 /* RoastrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AAAB59431DB034BC00CB2344 /* RoastrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAAB59531DB034BC00CB2344 /* Build configuration list for PBXNativeTarget "RoastrUITests" */;
+			buildPhases = (
+				AAAB59401DB034BC00CB2344 /* Sources */,
+				AAAB59411DB034BC00CB2344 /* Frameworks */,
+				AAAB59421DB034BC00CB2344 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAAB59461DB034BC00CB2344 /* PBXTargetDependency */,
+			);
+			name = RoastrUITests;
+			productName = RoastrUITests;
+			productReference = AAAB59441DB034BC00CB2344 /* RoastrUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAAB59181DB034BB00CB2344 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = ryanlwiener;
+				TargetAttributes = {
+					AAAB591F1DB034BB00CB2344 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = LP92XRQZJX;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					AAAB59381DB034BC00CB2344 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = LP92XRQZJX;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AAAB591F1DB034BB00CB2344;
+					};
+					AAAB59431DB034BC00CB2344 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = LP92XRQZJX;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AAAB591F1DB034BB00CB2344;
+					};
+				};
+			};
+			buildConfigurationList = AAAB591B1DB034BB00CB2344 /* Build configuration list for PBXProject "Roastr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAAB59171DB034BB00CB2344;
+			productRefGroup = AAAB59211DB034BB00CB2344 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAAB591F1DB034BB00CB2344 /* Roastr */,
+				AAAB59381DB034BC00CB2344 /* RoastrTests */,
+				AAAB59431DB034BC00CB2344 /* RoastrUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAAB591E1DB034BB00CB2344 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA7AC2891E70A35200273DF8 /* left.png in Resources */,
+				AA7AC28B1E70A35200273DF8 /* x.png in Resources */,
+				AA7AC28A1E70A35200273DF8 /* roastrtransparent.png in Resources */,
+				AAE9568E1DF5253000E63C11 /* LaunchScreen.storyboard in Resources */,
+				AAAEBA3B1DB0362C004EC48A /* Assets.xcassets in Resources */,
+				AA7AC2881E70A35200273DF8 /* cover.png in Resources */,
+				AAAEBA471DB036AD004EC48A /* Main.storyboard in Resources */,
+				AA7AC2871E70A35200273DF8 /* checkmark.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAB59371DB034BC00CB2344 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAB59421DB034BC00CB2344 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D74574CED23C387027C2032 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Roastr/Pods-Roastr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46F07139FBE3C457BBEA5D31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Roastr/Pods-Roastr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D1BA54B9A6622B580150480 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAAB591C1DB034BB00CB2344 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC0F53E1E18AC7C00057C53 /* LeaderboardViewController.m in Sources */,
+				AAAEBA451DB0362C004EC48A /* ViewController.m in Sources */,
+				AAAEBA3D1DB0362C004EC48A /* Base64.m in Sources */,
+				AAFF5C8E1DD7BD3900FF3D57 /* CommentsViewController.m in Sources */,
+				AAAEBA401DB0362C004EC48A /* PostingViewController.m in Sources */,
+				AAAEBA421DB0362C004EC48A /* PostView.m in Sources */,
+				AAC73C341DC3E51D0010E4CE /* PostViewController.m in Sources */,
+				AAC31D751DFF097E00BBFA3D /* MessagesViewController.m in Sources */,
+				AAAEBA3F1DB0362C004EC48A /* main.m in Sources */,
+				AAAEBA431DB0362C004EC48A /* ProfileViewController.m in Sources */,
+				AAAEBA411DB0362C004EC48A /* PostsViewController.m in Sources */,
+				AAA7F9B71E03295E0056E73E /* ConversationsViewController.m in Sources */,
+				AAAEBA441DB0362C004EC48A /* SearchViewController.m in Sources */,
+				AAB9B8921E0A390B00FED9B3 /* FriendsViewController.m in Sources */,
+				AAAEBA3A1DB0362C004EC48A /* AppDelegate.m in Sources */,
+				AAAF58CB1DEA4E0300681395 /* LikesViewController.m in Sources */,
+				AA5B8AAF1E0B7A64009C131B /* FriendRequestsViewController.m in Sources */,
+				AA2E86411DF8ABC20051BB59 /* SettingsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAB59351DB034BC00CB2344 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAAB593E1DB034BC00CB2344 /* RoastrTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAB59401DB034BC00CB2344 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAAB59491DB034BC00CB2344 /* RoastrUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAAB593B1DB034BC00CB2344 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAAB591F1DB034BB00CB2344 /* Roastr */;
+			targetProxy = AAAB593A1DB034BC00CB2344 /* PBXContainerItemProxy */;
+		};
+		AAAB59461DB034BC00CB2344 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAAB591F1DB034BB00CB2344 /* Roastr */;
+			targetProxy = AAAB59451DB034BC00CB2344 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AAAB594B1DB034BC00CB2344 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AAAB594C1DB034BC00CB2344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAAB594E1DB034BC00CB2344 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1D672EE46EC07875216A655 /* Pods-Roastr.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Roastr/Roastr.entitlements;
+				DEVELOPMENT_TEAM = LP92XRQZJX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Roastr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanlwiener.Roastr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AAAB594F1DB034BC00CB2344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3FE8A8603A92843CBB8357E /* Pods-Roastr.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Roastr/Roastr.entitlements;
+				DEVELOPMENT_TEAM = LP92XRQZJX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Roastr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanlwiener.Roastr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AAAB59511DB034BC00CB2344 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = LP92XRQZJX;
+				INFOPLIST_FILE = RoastrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanlwiener.RoastrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roastr.app/Roastr";
+			};
+			name = Debug;
+		};
+		AAAB59521DB034BC00CB2344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = LP92XRQZJX;
+				INFOPLIST_FILE = RoastrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanlwiener.RoastrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roastr.app/Roastr";
+			};
+			name = Release;
+		};
+		AAAB59541DB034BC00CB2344 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = LP92XRQZJX;
+				INFOPLIST_FILE = RoastrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanlwiener.RoastrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Roastr;
+			};
+			name = Debug;
+		};
+		AAAB59551DB034BC00CB2344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = LP92XRQZJX;
+				INFOPLIST_FILE = RoastrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanlwiener.RoastrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Roastr;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAAB591B1DB034BB00CB2344 /* Build configuration list for PBXProject "Roastr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAAB594B1DB034BC00CB2344 /* Debug */,
+				AAAB594C1DB034BC00CB2344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAAB594D1DB034BC00CB2344 /* Build configuration list for PBXNativeTarget "Roastr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAAB594E1DB034BC00CB2344 /* Debug */,
+				AAAB594F1DB034BC00CB2344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAAB59501DB034BC00CB2344 /* Build configuration list for PBXNativeTarget "RoastrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAAB59511DB034BC00CB2344 /* Debug */,
+				AAAB59521DB034BC00CB2344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAAB59531DB034BC00CB2344 /* Build configuration list for PBXNativeTarget "RoastrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAAB59541DB034BC00CB2344 /* Debug */,
+				AAAB59551DB034BC00CB2344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAAB59181DB034BB00CB2344 /* Project object */;
+}

@@ -200,7 +200,7 @@
 - (void)doRemoveAds
 {
 	[AppDelegate setAdsRemoved:YES];
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/removeAds.php?arg1=%d", [AppDelegate getUserID]]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/removeAds.php?arg1=%d", [AppDelegate getUserID]]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:

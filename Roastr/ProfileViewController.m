@@ -171,7 +171,7 @@
 
 - (void)getUserDataWithCompletionHandler:(void (^)(NSString *username, UIImage *profilePicture, int numPosts, int numLikes, int numFriends, int friended))completionHandler
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getUserData.php?arg1=%d&arg2=%d", _userID, [AppDelegate getUserID]]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getUserData.php?arg1=%d&arg2=%d", _userID, [AppDelegate getUserID]]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:
@@ -371,7 +371,7 @@
 {
 	UIAlertController *warning = [UIAlertController alertControllerWithTitle:@"Delete Post?" message:@"Are you sure you want to delete the post?" preferredStyle:UIAlertControllerStyleAlert];
 	UIAlertAction *delete = [UIAlertAction actionWithTitle:@"Yes, delete" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action){
-		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/removePost.php?arg1=%d", postID]];
+		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/removePost.php?arg1=%d", postID]];
 		NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 		NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 												completionHandler:
@@ -398,7 +398,7 @@
 
 - (void)getImageCountWithIndex:(int)index completionHandler:(void (^)(BOOL completed))completionHandler
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getImageCount.php?arg1=%d", index]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getImageCount.php?arg1=%d", index]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:
@@ -422,7 +422,7 @@
 	enemy.textAlignment = NSTextAlignmentCenter;
 	enemy.adjustsFontSizeToFitWidth = YES;
 	[_bottomMiddleView addSubview:enemy];
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/addFriendRequest.php?user1=%d&user2=%d", [AppDelegate getUserID], _userID]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/addFriendRequest.php?user1=%d&user2=%d", [AppDelegate getUserID], _userID]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:
@@ -443,7 +443,7 @@
 	enemy.textAlignment = NSTextAlignmentCenter;
 	enemy.adjustsFontSizeToFitWidth = YES;
 	[_bottomMiddleView addSubview:enemy];
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/acceptFriendRequestBetweenUsers.php?user1=%d&user2=%d", _userID, [AppDelegate getUserID]]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/acceptFriendRequestBetweenUsers.php?user1=%d&user2=%d", _userID, [AppDelegate getUserID]]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:
@@ -464,7 +464,7 @@
 	enemy.textAlignment = NSTextAlignmentCenter;
 	enemy.adjustsFontSizeToFitWidth = YES;
 	[_bottomMiddleView addSubview:enemy];
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/removeFriendRequestBetweenUsers.php?user1=%d&user2=%d", _userID, [AppDelegate getUserID]]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/removeFriendRequestBetweenUsers.php?user1=%d&user2=%d", _userID, [AppDelegate getUserID]]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:
@@ -618,7 +618,7 @@
 	NSString *imageString = [Base64 encode:imageData];
 	imageString = [imageString stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"];
 	NSData *requestData = [[NSData alloc] initWithData:[[NSString stringWithFormat:@"picture=%@&userID=%d", imageString, [AppDelegate getUserID]] dataUsingEncoding:NSUTF8StringEncoding]];
-	NSURL *url= [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/setProfilePicture.php"]];
+	NSURL *url= [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/setProfilePicture.php"]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	[urlRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[requestData length]] forHTTPHeaderField:@"Content-Length"];
 	[urlRequest setHTTPMethod:@"POST"];

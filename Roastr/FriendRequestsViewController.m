@@ -89,7 +89,7 @@
 
 - (void)getFriendWithIndex:(int)index
 {
-	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getFriendRequestData.php?arg1=%d&arg2=%d", _userID, _numFriends - index]];
+	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getFriendRequestData.php?arg1=%d&arg2=%d", _userID, _numFriends - index]];
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 	NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
 									  {
@@ -316,7 +316,7 @@
 
 - (void)getFriendCountWithCompletionHandler:(void (^)(BOOL completed))completionHandler
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getNumFriendRequests.php?arg1=%d", [AppDelegate getUserID]]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getNumFriendRequests.php?arg1=%d", [AppDelegate getUserID]]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:
@@ -337,7 +337,7 @@
 	int user = [[[_friendData objectAtIndex:row] valueForKey:@"user"] intValue];
 	[_friendData removeObjectAtIndex:row];
 	[_friends reloadData];
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/acceptFriendRequestBetweenUsers.php?user1=%d&user2=%d", user, [AppDelegate getUserID]]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/acceptFriendRequestBetweenUsers.php?user1=%d&user2=%d", user, [AppDelegate getUserID]]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:
@@ -355,7 +355,7 @@
 	int user = [[[_friendData objectAtIndex:row] valueForKey:@"user"] intValue];
 	[_friendData removeObjectAtIndex:row];
 	[_friends reloadData];
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/removeFriendRequestBetweenUsers.php?user1=%d&user2=%d", user, [AppDelegate getUserID]]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/removeFriendRequestBetweenUsers.php?user1=%d&user2=%d", user, [AppDelegate getUserID]]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:

@@ -82,7 +82,7 @@
 
 - (void)getConversationWithIndex:(int)index
 {
-	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getConversationData.php?arg1=%d&arg2=%d", [AppDelegate getUserID], index]];
+	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getConversationData.php?arg1=%d&arg2=%d", [AppDelegate getUserID], index]];
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 	NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
 									  {
@@ -310,7 +310,7 @@
 
 - (void)getConversationCountWithCompletionHandler:(void (^)(BOOL completed))completionHandler
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getNumConversations.php?arg1=%d", [AppDelegate getUserID]]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getNumConversations.php?arg1=%d", [AppDelegate getUserID]]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:

@@ -189,7 +189,7 @@
 	}
 	else
 	{
-		NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getLikeUsers.php?arg1=%@", searchText]];
+		NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getLikeUsers.php?arg1=%@", searchText]];
 		NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 		NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
 										  {
@@ -245,7 +245,7 @@
 
 - (void)getMessageWithIndex:(int)index completionHandler:(void (^)(BOOL completed))completionHandler
 {
-	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getMessageData.php?user1=%d&user2=%d&index=%d", _user1ID, _user2ID, _numMessages - index]];
+	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getMessageData.php?user1=%d&user2=%d&index=%d", _user1ID, _user2ID, _numMessages - index]];
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 	NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
 									  {
@@ -703,7 +703,7 @@
 
 - (void)getUserID:(NSString*)username completionHandler:(void (^)(int userID))completionHandler
 {
-	NSString *urlString = [[NSString alloc] initWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getIDForUser.php?arg1='%@'", username];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"https://roastr2.herokuapp.com/getIDForUser.php?arg1='%@'", username];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:request
@@ -758,7 +758,7 @@
 		//comment = [[@"\"" stringByAppendingString:comment] stringByAppendingString:@"\""];
 		message = [message stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
 		NSString *requestText = [NSString stringWithFormat:@"message=%@&sender=%d&receiver=%d", message, _user1ID, _user2ID];
-		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/addMessage.php"]];
+		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/addMessage.php"]];
 		NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 		[urlRequest setHTTPMethod:@"POST"];
 		[urlRequest setHTTPBody:[requestText dataUsingEncoding:NSUTF8StringEncoding]];
@@ -785,7 +785,7 @@
 
 - (void)deleteMessage:(int)messageID
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/removeMessage.php?arg1=%d", messageID]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/removeMessage.php?arg1=%d", messageID]];
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:
@@ -816,7 +816,7 @@
 
 - (void)getMessageCountWithCompletionHandler:(void (^)(BOOL completed))completionHandler
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getNumMessages.php?user1=%d&user2=%d", _user1ID, _user2ID]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getNumMessages.php?user1=%d&user2=%d", _user1ID, _user2ID]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:

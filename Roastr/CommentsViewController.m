@@ -168,7 +168,7 @@
 	}
 	else
 	{
-		NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getLikeUsers.php?arg1=%@", searchText]];
+		NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getLikeUsers.php?arg1=%@", searchText]];
 		NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 		NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
 										  {
@@ -222,7 +222,7 @@
 
 - (void)getCommentWithIndex:(int)index
 {
-	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getCommentData.php?arg1=%d&arg2=%d", _postID, _numComments - index]];
+	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getCommentData.php?arg1=%d&arg2=%d", _postID, _numComments - index]];
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 	NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
 									  {
@@ -610,7 +610,7 @@
 
 - (void)getUserID:(NSString*)username completionHandler:(void (^)(int userID))completionHandler
 {
-	NSString *urlString = [[NSString alloc] initWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getIDForUser.php?arg1='%@'", username];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"https://roastr2.herokuapp.com/getIDForUser.php?arg1='%@'", username];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:request
@@ -665,7 +665,7 @@
 		comment = [[@"\"" stringByAppendingString:comment] stringByAppendingString:@"\""];
 		comment = [comment stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
 		NSString *requestText = [NSString stringWithFormat:@"comment=%@&post=%d&user=%d", comment, _postID, [AppDelegate getUserID]];
-		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/addComment.php"]];
+		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/addComment.php"]];
 		NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 		[urlRequest setHTTPMethod:@"POST"];
 		[urlRequest setHTTPBody:[requestText dataUsingEncoding:NSUTF8StringEncoding]];
@@ -698,7 +698,7 @@
 
 - (void)deleteComment:(int)commentID
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/removeComment.php?arg1=%d", commentID]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/removeComment.php?arg1=%d", commentID]];
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:
@@ -727,7 +727,7 @@
 
 - (void)getCommentCountWithCompletionHandler:(void (^)(BOOL completed))completionHandler
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getNumComments.php?arg1=%d", _postID]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getNumComments.php?arg1=%d", _postID]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:

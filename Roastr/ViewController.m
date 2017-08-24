@@ -150,7 +150,7 @@
 {
 	NSLog(@"Ass");
     user = [user stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
-    NSString *urlString = [[NSString alloc] initWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/checkUser.php?arg1='%@'", user];
+    NSString *urlString = [[NSString alloc] initWithFormat:@"https://roastr2.herokuapp.com/checkUser.php?arg1='%@'", user];
     NSURL *url = [[NSURL alloc] initWithString:urlString];
 	NSLog(@"%@", url);
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -219,7 +219,7 @@
     {
         user = [user stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
         _passwordText = [_passwordText stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
-    NSString *urlString = [[NSString alloc] initWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/addUser.php?username='%@'&password='%@'", user, _passwordText];
+    NSString *urlString = [[NSString alloc] initWithFormat:@"https://roastr2.herokuapp.com/addUser.php?username='%@'&password='%@'", user, _passwordText];
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request
@@ -257,7 +257,7 @@
 - (void)checkPasswordWithUser:(NSString*)user completionHandler:(void (^)(BOOL correct))completionHandler
 {
     NSLog(@"%@ %@", user, _passwordText);
-    NSString *urlString = [[NSString alloc] initWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/checkPassword.php?arg1='%@'&arg2=%@", user, _passwordText];
+    NSString *urlString = [[NSString alloc] initWithFormat:@"https://roastr2.herokuapp.com/checkPassword.php?arg1='%@'&arg2=%@", user, _passwordText];
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request

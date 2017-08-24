@@ -41,7 +41,7 @@
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
- NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getLikeUsers.php?arg1=%@", searchText]];
+ NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getLikeUsers.php?arg1=%@", searchText]];
  NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
  NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
 								   {
@@ -93,7 +93,7 @@
 
 - (void)getUserID:(NSString*)username completionHandler:(void (^)(int userID))completionHandler
 {
-	NSString *urlString = [[NSString alloc] initWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getIDForUser.php?arg1='%@'", username];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"https://roastr2.herokuapp.com/getIDForUser.php?arg1='%@'", username];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:request

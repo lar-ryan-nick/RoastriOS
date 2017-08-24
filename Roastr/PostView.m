@@ -270,7 +270,7 @@
 
 - (void)getPostDataForUser:(int)user index:(int)index completionHandler:(void (^)(int postID, int userID, UIImage *profilePicture, NSString *caption, NSString *username, UIImage *image, int likes, BOOL liked, int comments, int time))completionHandler
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getPostData.php?arg1=%d&arg2=%d&arg3=%d", user, index,  [AppDelegate getUserID]]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getPostData.php?arg1=%d&arg2=%d&arg3=%d", user, index,  [AppDelegate getUserID]]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	[urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-type"];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
@@ -296,11 +296,15 @@
 											  {
 												  profilePicture = [self roundedRectImageFromImage:profilePicture size:CGSizeMake(30, 30) withCornerRadius:15];
 											  }
-											  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-											  formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-											  formatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-											  NSDate *date = [formatter dateFromString:[postData valueForKey:@"timePosted"]];
-											  int time = -(int)[date timeIntervalSinceNow];
+											  int time = 0;
+											  NSLog(@"%@", [postData valueForKey:@"timePosted"]);
+											  /*
+												  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+												  formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+												  formatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+												  NSDate *date = [formatter dateFromString:[postData valueForKey:@"timePosted"]];
+												  int time = -(int)[date timeIntervalSinceNow];
+											  */
 											  dispatch_async(dispatch_get_main_queue(), ^{
 												  completionHandler([[postData valueForKey:@"id"] intValue], [[postData valueForKey:@"user"] intValue], profilePicture, [postData valueForKey:@"caption"], [postData valueForKey:@"username"], image, [[postData valueForKey:@"likes"] intValue], [[postData valueForKey:@"liked"] boolValue], [[postData valueForKey:@"comments"] intValue], time);
 											  });
@@ -316,7 +320,7 @@
 
 - (void)getPostDataForMostHatesUser:(int)user Index:(int)index completionHandler:(void (^)(int postID, int userID, UIImage *profilePicture, NSString *caption, NSString *username, UIImage *image, int likes, BOOL liked, int comments, int time))completionHandler
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getPostMostHatesData.php?user=%d&post=%d&user2=%d", user, index,  [AppDelegate getUserID]]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getPostMostHatesData.php?user=%d&post=%d&user2=%d", user, index,  [AppDelegate getUserID]]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	[urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
@@ -341,11 +345,15 @@
 											  {
 												  profilePicture = [self roundedRectImageFromImage:profilePicture size:CGSizeMake(30, 30) withCornerRadius:15];
 											  }
-											  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-											  formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-											  formatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-											  NSDate *date = [formatter dateFromString:[postData valueForKey:@"timePosted"]];
-											  int time = -(int)[date timeIntervalSinceNow];
+											  int time = 0;
+											  NSLog(@"%@", [postData valueForKey:@"timePosted"]);
+											  /*
+												  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+												  formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+												  formatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+												  NSDate *date = [formatter dateFromString:[postData valueForKey:@"timePosted"]];
+												  int time = -(int)[date timeIntervalSinceNow];
+											  */
 											  dispatch_async(dispatch_get_main_queue(), ^{
 												  completionHandler([[postData valueForKey:@"id"] intValue], [[postData valueForKey:@"user"] intValue], profilePicture, [postData valueForKey:@"caption"], [postData valueForKey:@"username"], image, [[postData valueForKey:@"likes"] intValue], [[postData valueForKey:@"liked"] boolValue], [[postData valueForKey:@"comments"] intValue], time);
 											  });
@@ -428,7 +436,7 @@
 
 - (void)getUserID:(NSString*)username completionHandler:(void (^)(int userID))completionHandler
 {
-	NSString *urlString = [[NSString alloc] initWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getIDForUser.php?arg1='%@'", username];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"https://roastr2.herokuapp.com/getIDForUser.php?arg1='%@'", username];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:request
@@ -483,7 +491,7 @@
 	fire.font = [UIFont systemFontOfSize:fire.bounds.size.height / 2];
 	fire.textAlignment = NSTextAlignmentCenter;
 	[_imageView addSubview:fire];
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/addLike.php?user=%d&post=%d", [AppDelegate getUserID], _postID]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/addLike.php?user=%d&post=%d", [AppDelegate getUserID], _postID]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:
@@ -504,7 +512,7 @@
 
 - (IBAction)unlikePost:(UIBarButtonItem*)sender
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/removeLike.php?user=%d&post=%d", [AppDelegate getUserID], _postID]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/removeLike.php?user=%d&post=%d", [AppDelegate getUserID], _postID]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:
@@ -566,7 +574,7 @@
 
 - (void)loadUsersWhoLikedPostWithCompletionHandler:(void (^)(BOOL completed))completionHandler
 {
-	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getUsersWhoLikedPost.php?arg1=%d", _postID]];
+	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getUsersWhoLikedPost.php?arg1=%d", _postID]];
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 	NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
 									  {
@@ -613,7 +621,7 @@
 
 - (void)getNumLikesWithCompletionHandler:(void (^)(int likes))completionHandler
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getNumLikes.php?arg1=%d", _postID]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getNumLikes.php?arg1=%d", _postID]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E1D65FD31CCCF18C4A243E5E502B3259909CEBFA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "829FCA9C61A5403530E2293F8930799B889ECBCC" : 9223372036854775807,
+    "E1D65FD31CCCF18C4A243E5E502B3259909CEBFA" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C221BE40-BA38-4510-9DB0-6E20B218DDCC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "829FCA9C61A5403530E2293F8930799B889ECBCC" : "",
+    "E1D65FD31CCCF18C4A243E5E502B3259909CEBFA" : "client\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Roastr",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Roastr.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lar-ryan-nick\/Roastr.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "829FCA9C61A5403530E2293F8930799B889ECBCC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lar-ryan-nick\/RoastriOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E1D65FD31CCCF18C4A243E5E502B3259909CEBFA"
+    }
+  ]
+}

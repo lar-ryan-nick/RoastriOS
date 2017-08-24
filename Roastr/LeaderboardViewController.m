@@ -143,7 +143,7 @@
 {
 	if (_leaderType.selectedSegmentIndex == 0)
 	{
-		NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getMostEnemyLeaderData.php?arg1=%d", index]];
+		NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getMostEnemyLeaderData.php?arg1=%d", index]];
 		NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 		NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
 										  {
@@ -187,7 +187,7 @@
 	}
 	else if (_leaderType.selectedSegmentIndex == 1)
 	{
-		NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getMostHateLeaderData.php?arg1=%d", index]];
+		NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getMostHateLeaderData.php?arg1=%d", index]];
 		NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 		NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
 										  {
@@ -430,7 +430,7 @@
 
 - (void)getUserCountWithCompletionHandler:(void (^)(BOOL completed))completionHandler
 {
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getNumUsers.php"]];
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://roastr2.herokuapp.com/getNumUsers.php"]];
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
 											completionHandler:

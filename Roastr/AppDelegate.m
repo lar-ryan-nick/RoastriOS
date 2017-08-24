@@ -79,7 +79,7 @@
 	_conversationsPresentedViewControllers = [[NSMutableArray alloc] init];
 	if ([_window.rootViewController isEqual:_viewController])
 	{
-		NSString *urlString = [[NSString alloc] initWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getUserInfo.php?arg1='%@'", _viewController.username.text];
+		NSString *urlString = [[NSString alloc] initWithFormat:@"https://roastr2.herokuapp.com/getUserInfo.php?arg1='%@'", _viewController.username.text];
 		NSURL *url = [[NSURL alloc] initWithString:urlString];
 		NSURLRequest *request = [NSURLRequest requestWithURL:url];
 		NSURLSessionDataTask *task = [session dataTaskWithRequest:request
@@ -107,7 +107,7 @@
 	else
 	{
 		[self registerForRemoteNotifications];
-		NSString *urlString = [[NSString alloc] initWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/getRemovedAdsForUser.php?arg1='%d'", userID];
+		NSString *urlString = [[NSString alloc] initWithFormat:@"https://roastr2.herokuapp.com/getRemovedAdsForUser.php?arg1='%d'", userID];
 		NSURL *url = [[NSURL alloc] initWithString:urlString];
 		NSURLRequest *request = [NSURLRequest requestWithURL:url];
 		NSURLSessionDataTask *task = [session dataTaskWithRequest:request
@@ -519,7 +519,7 @@
 
 - (void)updateDeviceToken
 {
-	NSString *urlString = [[NSString alloc] initWithFormat:@"http://ec2-35-164-1-3.us-west-2.compute.amazonaws.com/setDeviceTokenForUser.php?arg1='%@'&arg2=%d", token, userID];
+	NSString *urlString = [[NSString alloc] initWithFormat:@"https://roastr2.herokuapp.com/setDeviceTokenForUser.php?arg1='%@'&arg2=%d", token, userID];
 	NSURL *url = [[NSURL alloc] initWithString:urlString];
 	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
 	NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest
